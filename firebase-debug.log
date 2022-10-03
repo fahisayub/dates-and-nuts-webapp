@@ -1,0 +1,133 @@
+[debug] [2022-09-10T02:00:51.953Z] ----------------------------------------------------------------------
+[debug] [2022-09-10T02:00:51.955Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\fahis\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-09-10T02:00:51.955Z] CLI Version:   11.8.1
+[debug] [2022-09-10T02:00:51.955Z] Platform:      win32
+[debug] [2022-09-10T02:00:51.955Z] Node Version:  v16.14.0
+[debug] [2022-09-10T02:00:51.956Z] Time:          Sat Sep 10 2022 07:30:51 GMT+0530 (India Standard Time)
+[debug] [2022-09-10T02:00:51.956Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-10T02:00:52.045Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-10T02:00:52.045Z] > authorizing via signed-in user (fahisayub@gmail.com)
+[debug] [2022-09-10T02:00:52.283Z] java version "17.0.4" 2022-07-19 LTS
+
+[debug] [2022-09-10T02:00:52.284Z] Java(TM) SE Runtime Environment (build 17.0.4+11-LTS-179)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.4+11-LTS-179, mixed mode, sharing)
+
+[debug] [2022-09-10T02:00:52.303Z] Parsed Java major version: 17
+[info] i  emulators: Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage, eventarc {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, database, hosting, pubsub, storage, eventarc"}}
+[debug] [2022-09-10T02:00:52.316Z] [hub] writing locator at C:\Users\fahis\AppData\Local\Temp\hub-learn-with-firebase.json
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-09-10T02:00:52.382Z] defaultcredentials: writing to file C:\Users\fahis\AppData\Roaming\firebase\fahisayub_gmail_com_application_default_credentials.json
+[debug] [2022-09-10T02:00:52.385Z] Setting GAC to C:\Users\fahis\AppData\Roaming\firebase\fahisayub_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\fahis\\AppData\\Roaming\\firebase\\fahisayub_gmail_com_application_default_credentials.json"}}
+[debug] [2022-09-10T02:00:52.386Z] > refreshing access token with scopes: []
+[debug] [2022-09-10T02:00:52.388Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-09-10T02:00:52.388Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-10T02:00:52.897Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-09-10T02:00:52.897Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-10T02:00:52.918Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/learn-with-firebase/adminSdkConfig [none]
+[debug] [2022-09-10T02:00:53.684Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/learn-with-firebase/adminSdkConfig 200
+[debug] [2022-09-10T02:00:53.685Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/learn-with-firebase/adminSdkConfig {"projectId":"learn-with-firebase","databaseURL":"https://learn-with-firebase-default-rtdb.firebaseio.com","storageBucket":"learn-with-firebase.appspot.com","locationId":"us-central"}
+[debug] [2022-09-10T02:00:53.731Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2022-09-10T02:00:53.731Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-09-10T02:00:53.731Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\fahis\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.14.4.jar","--host","localhost","--port",8081,"--rules","C:\\Users\\fahis\\Masai School\\Masai-Course\\muhammed_fp02_152\\PR-RCT\\dates_and_nuts_ecom_app\\firestore.rules","--functions_emulator","localhost:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\fahis\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.14.4.jar\",\"--host\",\"localhost\",\"--port\",8081,\"--rules\",\"C:\\\\Users\\\\fahis\\\\Masai School\\\\Masai-Course\\\\muhammed_fp02_152\\\\PR-RCT\\\\dates_and_nuts_ecom_app\\\\firestore.rules\",\"--functions_emulator\",\"localhost:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"functions_emulator\",\"seed_from_export\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2022-09-10T02:00:56.335Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/learn-with-firebase [none]
+[debug] [2022-09-10T02:00:56.847Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/learn-with-firebase 200
+[debug] [2022-09-10T02:00:56.847Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/learn-with-firebase {"projectId":"learn-with-firebase","projectNumber":"464801240094","displayName":"Learn with Firebase","name":"projects/learn-with-firebase","resources":{"hostingSite":"learn-with-firebase","realtimeDatabaseInstance":"learn-with-firebase-default-rtdb","storageBucket":"learn-with-firebase.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_304db0f6-bafc-4991-ba21-fe2ff73c9b23"}
+[debug] [2022-09-10T02:00:56.847Z] database rules config:  [{"instance":"learn-with-firebase-default-rtdb","rules":"C:\\Users\\fahis\\Masai School\\Masai-Course\\muhammed_fp02_152\\PR-RCT\\dates_and_nuts_ecom_app\\realtimedb.rules.json"}]
+[debug] [2022-09-10T02:00:56.851Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2022-09-10T02:00:56.851Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-09-10T02:00:56.851Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2022-09-10T02:00:56.851Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\fahis\\.cache\\firebase\\emulators\\firebase-database-emulator-v4.8.0.jar","--host","localhost","--port",9000,"--functions_emulator_host","localhost","--functions_emulator_port",5001],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\fahis\\\\.cache\\\\firebase\\\\emulators\\\\firebase-database-emulator-v4.8.0.jar\",\"--host\",\"localhost\",\"--port\",9000,\"--functions_emulator_host\",\"localhost\",\"--functions_emulator_port\",5001],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2022-09-10T02:01:05.722Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2022-09-10T02:01:05.722Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-09-10T02:01:05.723Z] Starting Pub/Sub Emulator with command {"binary":"C:\\Users\\fahis\\.cache\\firebase\\emulators\\pubsub-emulator-0.1.0\\pubsub-emulator\\bin\\cloud-pubsub-emulator.bat","args":["--host=localhost","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"C:\\\\Users\\\\fahis\\\\.cache\\\\firebase\\\\emulators\\\\pubsub-emulator-0.1.0\\\\pubsub-emulator\\\\bin\\\\cloud-pubsub-emulator.bat\",\"args\":[\"--host=localhost\",\"--port=8085\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2022-09-10T02:01:08.613Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-09-10T02:01:09.407Z] Temp file directory for storage emulator: C:\Users\fahis\AppData\Local\Temp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: C:\\Users\\fahis\\AppData\\Local\\Temp/firebase/storage/blobs"}}
+[debug] [2022-09-10T02:01:09.414Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/learn-with-firebase/sites 
+[debug] [2022-09-10T02:01:12.483Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/learn-with-firebase/sites 200
+[debug] [2022-09-10T02:01:12.484Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/learn-with-firebase/sites {"sites":[{"name":"projects/learn-with-firebase/sites/learn-with-firebase","defaultUrl":"https://learn-with-firebase.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2022-09-10T02:01:12.485Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/learn-with-firebase/webApps/-/config [none]
+[debug] [2022-09-10T02:01:13.982Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/learn-with-firebase/webApps/-/config 200
+[debug] [2022-09-10T02:01:13.983Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/learn-with-firebase/webApps/-/config {"projectId":"learn-with-firebase","databaseURL":"https://learn-with-firebase-default-rtdb.firebaseio.com","storageBucket":"learn-with-firebase.appspot.com","locationId":"us-central","apiKey":"AIzaSyAAwUoQVp1vFLNLaUM3-pqzaqcGDKN1xCU","authDomain":"learn-with-firebase.firebaseapp.com","messagingSenderId":"464801240094"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2022-09-10T02:01:14.044Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-09-10T02:01:14.044Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-09-10T02:01:14.044Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\fahis\\.cache\\firebase\\emulators\\ui-v1.9.0\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\fahis\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.9.0\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-09-10T02:01:14.230Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "C:\Users\fahis\Masai School\Masai-Course\muhammed_fp02_152\PR-RCT\dates_and_nuts_ecom_app\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\fahis\\Masai School\\Masai-Course\\muhammed_fp02_152\\PR-RCT\\dates_and_nuts_ecom_app\\functions\" for Cloud Functions..."}}
+[debug] [2022-09-10T02:01:14.330Z] Validating nodejs source
+[debug] [2022-09-10T02:01:18.313Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-10T02:01:18.314Z] Building nodejs source
+[debug] [2022-09-10T02:01:18.314Z] Analyzing nodejs backend spec
+[debug] [2022-09-10T02:01:18.315Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-10T02:01:18.654Z] Serving at port 9005
+
+[debug] [2022-09-10T02:01:18.749Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-10T02:01:18.756Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2022-09-10T02:01:18.775Z] >>> [apiv2][query] PUT http://localhost:9000/.settings/rules.json ns=learn-with-firebase-default-rtdb
+[debug] [2022-09-10T02:01:18.776Z] >>> [apiv2][body] PUT http://localhost:9000/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2022-09-10T02:01:19.200Z] <<< [apiv2][status] PUT http://localhost:9000/.settings/rules.json 200
+[debug] [2022-09-10T02:01:19.200Z] <<< [apiv2][body] PUT http://localhost:9000/.settings/rules.json {"status":"ok"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ localhost:9099 │ http://localhost:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ localhost:5001 │ http://localhost:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ localhost:8081 │ http://localhost:4000/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Database       │ localhost:9000 │ http://localhost:4000/database  │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Hosting        │ localhost:5000 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Pub/Sub        │ localhost:8085 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Storage        │ localhost:9199 │ http://localhost:4000/storage   │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Eventarc       │ localhost:9299 │ n/a                             │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
