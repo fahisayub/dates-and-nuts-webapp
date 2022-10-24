@@ -2,6 +2,10 @@ export const PRODUCTS_FETCH_REQUEST='products/fetch/request';
 export const PRODUCTS_FETCH_SUCCESS='products/fetch/success';
 export const PRODUCTS_FETCH_FAILURE='products/fetch/failure';
 
+export const GET_FEATURED_PRODUCTS_REQUEST='products/fetch/request';
+export const GET_FEATURED_PRODUCTS_SUCCESS='products/fetch/success';
+export const GET_FEATURED_PRODUCTS_FAILURE='products/fetch/failure';
+
 export const SINGLE_PRODUCT_FETCH_REQUEST='single/product/fetch/request';
 export const SINGLE_PRODUCT_FETCH_SUCCESS='single/product/fetch/success';
 export const SINGLE_PRODUCT_FETCH_FAILURE='single/product/fetch/failure';

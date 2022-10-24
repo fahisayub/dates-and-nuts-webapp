@@ -6,13 +6,16 @@ const Footer = () => {
   return (
     <Container
       maxW="full"
-      h={['400px',"200px"]}
+      display={['none', 'block']}
+      //h={['400px',"200px"]}
       bg="brand.900"
-      padding="50px"
+      padding="20px"
       color="brand.50"
     >
-      <Flex justifyContent="space-evenly" flexDirection={['column','row','row']}>
-        <Box>
+      <Flex  flexDirection={['column','row','row']}  textAlign='left'>
+        <Box p='50px'>
+          <Text >About </Text>
+          <Divider mb='10px' />
           <Link to="/">About Us</Link>
           <br />
           <Link to="/products">Products</Link>
@@ -20,16 +23,25 @@ const Footer = () => {
           <Link to="/orders">Orders</Link>
           <br />
           <Link to="/cart">Cart</Link>
-          <Divider margin="10px" />
         </Box>
-        <Box>
-          <Text>Contacts:</Text>
+        <Box p='50px'>
+          <Text>Contact Us</Text>
+          <Divider mb='10px' />
           <Text>Toll free:+91 8734859990</Text>
           <Text>Email : support@datesnnuts.com</Text>
-          <Divider margin="10px" />
+        </Box>
+        <Box p='50px'>
+          <Text>Social</Text>
+          <Divider mb='10px' />
+          <Text>LinkedIn</Text>
+          <Text>Twitter</Text>
+          <Text>Instagram</Text>
+          <Text>Youtube </Text>
         </Box>
       </Flex>
-        <Box>© All right reserved 2020-2022, datesnnuts.com, pvt.ltd</Box>
+          <Divider my="10px" />
+      
+        <Box>© All right reserved 2020-2022, datesnnuts.com</Box>
     </Container>
   );
 };

@@ -1,3 +1,4 @@
+import { async } from "@firebase/util";
 import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, updateDoc, where } from "firebase/firestore";
 import { db } from "../../utils/firebase-config";
 import * as types from "./actionTypes";
@@ -15,7 +16,7 @@ export const getProductApi = (params) => async (dispatch) => {
     params?.type?.length !== 0
       ? query(collection(db, "products"), where("type", "in", params.type))
       : query(collection(db, "products"));
-  getDocs(q)
+ await getDocs(q)
     .then((res) => {
       let products = [];
       res.forEach((doc) => {
@@ -33,12 +34,14 @@ export const getProductApi = (params) => async (dispatch) => {
       console.log("No such document!");
     });
 };
+export const getFeaturedProductsApi=()=>async(dispatch)=>{
+  
+}
 
-
-export const getCurrentProductApi=(payload)=>(dispatch)=>{
+export const getCurrentProductApi=(payload)=>async(dispatch)=>{
     dispatch({type:types.SINGLE_PRODUCT_FETCH_REQUEST});
     const docRef = doc(db, "products", payload);
- getDoc(docRef).then((res)=>{
+ await getDoc(docRef).then((res)=>{
 
      dispatch({ type: types.SINGLE_PRODUCT_FETCH_SUCCESS,payload:res.data()})
     // console.log("Document data:", res.data());
@@ -50,10 +53,10 @@ export const getCurrentProductApi=(payload)=>(dispatch)=>{
 
 }
 
-export const createProductApi=(payload)=>(dispatch)=>{
+export const createProductApi=(payload)=>async(dispatch)=>{
   dispatch({type:types.CREATE_PRODUCT_REQUEST});
   
-              addDoc(collection(db,'products'),payload).then((res)=>{
+              await addDoc(collection(db,'products'),payload).then((res)=>{
 
                 dispatch({type:types.CREATE_PRODUCT_SUCCESS});
                 console.log(res);
@@ -65,9 +68,9 @@ export const createProductApi=(payload)=>(dispatch)=>{
 
 }
 
-export const updateProductApi=(payload)=>(dispatch)=>{
+export const updateProductApi=(payload)=>async(dispatch)=>{
  dispatch({type:types.UPDATE_PRODUCT_REQUEST});
-  updateDoc(doc(db,'products',payload.id),payload.form).then((res)=>{
+ await updateDoc(doc(db,'products',payload.id),payload.form).then((res)=>{
     dispatch({type:types.UPDATE_PRODUCT_SUCCESS});
     dispatch(getProductApi({type:[]}))
     console.log(res);

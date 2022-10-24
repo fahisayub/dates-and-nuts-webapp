@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import FeaturedProdcuts from "../components/FeaturedProdcuts";
 import RecommendedProducts from "../components/RecommendedProducts";
 
+
 const HomePage = () => {
+ 
   return (
     <Container maxWidth="full" minH="auto" p="0px">
       <Container
