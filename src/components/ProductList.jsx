@@ -1,4 +1,4 @@
-import {   SimpleGrid, Skeleton } from '@chakra-ui/react';
+import {   Container, Divider, Heading, SimpleGrid, Skeleton } from '@chakra-ui/react';
 import React, { useEffect } from 'react';
 import {  useSelector } from 'react-redux';
 import ProductCard from './ProductCard';
@@ -39,15 +39,18 @@ order!=='desc'&&data?.length!==0?data?.sort((a, b) => a.price - b.price):data?.s
   
     console.log(data);
     return (
-      
-        <SimpleGrid columns={[1,2,2,3,4]} spacing={10} marginTop='20px' margin='20px' w='70%'   >
+      <Container maxW='full'p='20px' pb='100px'>
+<Heading color='brand.700'>Products</Heading>
+<Divider my='10px' borderColor='brand.500' />
+        <SimpleGrid columns={[1,2,2,3,4]} spacing={10}    >
         {isLoading?[0,0,0,0,0,0,0,0,0,0].map((val,i)=><Skeleton key={i} margin='auto'  borderRadius='10px'  height='250px' width='250px'/>)
         :isError?<Oops/>:data?.length>0 && data?.map((data) => {
-            return (
-               <ProductCard key={data.docid} data={data}/>
-          );
-      })}
+          return (
+            <ProductCard key={data.docid} data={data}/>
+            );
+          })}
       </SimpleGrid>
+          </Container>
     );
 };
 

@@ -60,13 +60,13 @@ useEffect(()=>{
 },[sort,setSearchParams,category])
 
   return (
-    <Container width={['full','20%',"20%"]}  p='0px' >
+    <Container width={['full','full',"full"]}  p='0px' >
       <Container display={['flex','flex','none']} justifyContent='space-between' p='20px' >
       <Menu closeOnSelect={false}>
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />} colorScheme='brand'>
     Filter
   </MenuButton>
-  <MenuList minWidth='240px' p='20px'>
+  <MenuList minWidth='240px' p='20px'bg='brand.50'>
   <CheckboxGroup   defaultValue={[...category]} >
           <Stack spacing={[1, 2]} direction="column" >
             <Checkbox value="Dry Fruit"onChange={onCategory}>Dry Fruit</Checkbox>
@@ -83,7 +83,7 @@ useEffect(()=>{
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />} colorScheme='brand'>
     Sort
   </MenuButton>
-  <MenuList minWidth='240px'>
+  <MenuList minWidth='240px ' p='20px' bg='brand.50'>
     
      <Text fontWeight="semibold">Sort by Price</Text>
 
@@ -97,7 +97,7 @@ useEffect(()=>{
   </MenuList>
 </Menu>
       </Container>
-      <Container bg='brand.50' w='full'm='0px'minH='100vh'h='full' display={['none','none','block']}>
+      <Container bg='brand.50' w='full'm='0px'minH='100vh'h='full'  display={['none','none','block']}>
 
       <Box>
         <Text fontWeight="semibold">Filter</Text>

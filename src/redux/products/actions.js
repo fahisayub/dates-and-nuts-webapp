@@ -1,5 +1,4 @@
-import { async } from "@firebase/util";
-import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, updateDoc, where } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, limit, query, updateDoc, where } from "firebase/firestore";
 import { db } from "../../utils/firebase-config";
 import * as types from "./actionTypes";
 
@@ -35,7 +34,25 @@ export const getProductApi = (params) => async (dispatch) => {
     });
 };
 export const getFeaturedProductsApi=()=>async(dispatch)=>{
-  
+  dispatch({ type: types.GET_FEATURED_PRODUCTS_REQUEST });
+let q=query(collection(db, "products"),limit(4));
+   getDocs(q)
+    .then((res) => {
+      let products = [];
+      res.forEach((doc) => {
+        const prod={
+            ...doc.data(),docid:doc.id,
+        }
+        products.push(prod);
+      });
+      console.log(products);
+
+      dispatch({ type: types.GET_FEATURED_PRODUCTS_SUCCESS, payload: products });
+    })
+    .catch((err) => {
+      dispatch({ type: types.GET_FEATURED_PRODUCTS_FAILURE });
+      console.log("No such document!");
+    });
 }
 
 export const getCurrentProductApi=(payload)=>async(dispatch)=>{
