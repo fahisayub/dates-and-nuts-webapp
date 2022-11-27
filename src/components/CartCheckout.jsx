@@ -60,6 +60,7 @@ const CartCheckout = () => {
     navigate("/orders");
     toast({
       title: "Order Place.",
+      position:'top',
       description: "order place successfully",
       status: "success",
       duration: 3000,
