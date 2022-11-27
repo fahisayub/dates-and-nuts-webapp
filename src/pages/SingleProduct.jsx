@@ -49,7 +49,7 @@ const SingleProduct = () => {
     if (id) {
       dispatch(getCurrentProductApi(id));
     }
-  }, [id]);
+  }, [id,dispatch]);
 
   const onAddtoCartHandler = () => {
     let payload = {

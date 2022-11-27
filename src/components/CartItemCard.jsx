@@ -31,7 +31,7 @@ const CartItemCard = ({item}) => {
 
     return (
         <Box  fontSize=".9em">
-              <Flex margin="10px" gap="10px">
+              <Flex margin="10px" gap="10px" display={['block','block','block','flex','flex']} >
                 <Image
                   src={item?.imageUrl}
                   h="50px"

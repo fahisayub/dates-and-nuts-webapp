@@ -1,19 +1,14 @@
-import { getAuth } from "firebase/auth";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteCartDataApi, getCartDataApi, updateCartApi } from "../redux/cart/actions";
+import {  getCartDataApi } from "../redux/cart/actions";
 import {
   Box,
-  Button,
-  Container,
+ 
   Divider,
-  Flex,
   Heading,
-  Image,
-  Select,
+  
   Skeleton,
-  Spacer,
-  Text,
+  
 } from "@chakra-ui/react";
 import Oops from "./Oops";
 import { auth } from "../utils/firebase-config";
@@ -37,21 +32,34 @@ const CartList = () => {
  
 
   return (
-    <Box p="20px" shadow="base" borderRadius="10px">
-      <Flex>
-        <Heading size="md">Shoping Cart</Heading>
-        <Spacer />
-        <Text fontWeight="semibold">Price</Text>
-      </Flex>
+    <Box p="20px"  borderRadius="10px">
+        <Heading size="md">Items</Heading>
+        
       <Divider orientation="horizontal" borderColor="gray.300" />
       {isLoading ? (
+        <>
         <Skeleton
-          margin="auto"
+          margin="10px"
           borderRadius="10px"
-          height="200px"
+          height="100px"
           width="full"
           colorScheme="orange"
-        />
+          />
+        <Skeleton
+          margin="10px"
+          borderRadius="10px"
+          height="100px"
+          width="full"
+          colorScheme="orange"
+          />
+        <Skeleton
+          margin="10px"
+          borderRadius="10px"
+          height="100px"
+          width="full"
+          colorScheme="orange"
+          />
+          </>
       ) : isError ? (
         <Oops />
       ) : (
