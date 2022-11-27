@@ -14,7 +14,7 @@ import {
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Oops from "../components/Oops";
 import RadioCard from "../components/RadioCard";
 import { addToCartDataApi } from "../redux/cart/actions";
@@ -29,7 +29,7 @@ const SingleProduct = () => {
     (state) => state.productReducer.currentProduct
   );
   const dispatch = useDispatch();
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const toast = useToast();
   const options = [100, 250, 500, 1000];
@@ -38,7 +38,7 @@ const SingleProduct = () => {
     defaultValue: qty,
     onChange: (e) => {
       console.log(e);
-      
+
       setQty(e);
     },
   });
@@ -68,34 +68,83 @@ const SingleProduct = () => {
       duration: 3000,
       isClosable: true,
     });
-    navigate('/products')
+    navigate("/products");
   };
 
   return (
-    <Container maxWidth={["full", "90%", "70%"]}>
+    <Container maxWidth={["full",'90%','80%']} margin="auto" mb='100px' padding='5px'>
       {isLoading ? (
-        <Skeleton
+        <Container 
+        marginTop="50px"
+        display="grid"
+        maxW="full"
+        gridTemplateAreas={[
+          `"img""product""details""review" `,
+          `"img""product""details""review" `,
+          `"img""product""details""review" `,
+          `"img img img product""review review review details" `,
+          `"img img img product""review review review details"`,
+        ]}
+        gap="50px"
+        padding='0px'
+        >
+
+        <Skeleton gridArea='img'
           margin="auto"
           borderRadius="10px"
           height="400px"
           width="400px"
-        />
+          />
+        <Skeleton gridArea='product'
+          margin="auto"
+          borderRadius="10px"
+          height="400px"
+          width="400px"
+          />
+        <Skeleton gridArea='review'
+          margin="auto"
+          borderRadius="10px"
+          height="400px"
+          width="400px"
+          />
+        <Skeleton gridArea='details'
+          margin="auto"
+          borderRadius="10px"
+          height="400px"
+          width="400px"
+          />
+          </Container>
       ) : isError ? (
         <Oops />
       ) : (
         <Container
           marginTop="50px"
-          display={["block", "block", "flex", "flex", "flex"]}
+          display="grid"
+          maxW="full"
+          gridTemplateAreas={[
+            `"img""product""details""review" `,
+            `"img""product""details""review" `,
+            `"img""product""details""review" `,
+            `"img img img product""review review review details"`,
+            `"img img img product""review review review details"`,
+          ]}
           gap="50px"
+          padding='0px'
         >
-          <Image
-            src={currentProduct?.imageUrl}
-            borderRadius="10px"
-            height="400px"
-          />
-          <Box>
-            <Text>Product id:{id}</Text>
-            <Heading size="md">{currentProduct?.title}</Heading>
+            <Image  src={currentProduct?.imageUrl} gridArea="img" margin='auto' borderRadius="10px" />
+
+          <Box gridArea="product">
+            <Heading size="lg">{currentProduct?.title}</Heading>
+            <Heading size="md" mt='10px' color="brand.600">
+              {`\u20B9`} {currentProduct?.price / 100} / 100g
+            </Heading>
+            <Heading size={"md"} mt='20px'>Description</Heading>
+              <Text>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                voluptates facere libero obcaecati, itaque sed ipsam consequatur
+                sapiente quo illum repellat alias quia tempora veritatis
+                doloribus veniam! Magni, cumque facilis?
+              </Text>
             <Box pt="50px">
               <Heading size="xs">Select quantity:</Heading>
               <Stack {...group} direction={["column", "row"]}>
@@ -108,20 +157,28 @@ const SingleProduct = () => {
                   );
                 })}
               </Stack>
-              <Button width="full" my="10px" bg="orange.300">
-                Buy now
-              </Button>
-              <Button
-                width="full"
-                my="10px"
-                bg="orange"
-                onClick={onAddtoCartHandler}
-              >
-                Add to cart
-              </Button>
+            
+              <HStack>
+                <Button width="full" my="10px" bg="orange.300">
+                  Buy now
+                </Button>
+                <Button
+                  width="full"
+                  my="10px"
+                  bg="orange"
+                  onClick={onAddtoCartHandler}
+                >
+                  Add to cart
+                </Button>
+              </HStack>
             </Box>
-            <Heading size="xs">Description</Heading>
+          </Box>
+          <Box gridArea="details">
+            <Heading size="md">Product Details</Heading>
             <Text>{currentProduct?.description}</Text>
+          </Box>
+          <Box gridArea="review">
+            <Heading size={"md"}>Reviews</Heading>
           </Box>
         </Container>
       )}
